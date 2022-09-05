@@ -32,5 +32,18 @@ After this you will need to store data in hiveDB for performing SQL Querries.
 # Note:
 you can run this code on cross environments like on local Machine and Sandbox-HDP.hortonworks but you will need to change your ip and host according to your platform.
 
+
+# Hive DataBase :
+
+For this first you will need to create a table and specify the columns in it. you need to customized it according to your need. in my case it looks like :
+
+![image](https://user-images.githubusercontent.com/81530072/188507721-22fd8ebc-0954-4ee3-8199-c8a31f5873d3.png)
+
+When you create a Hive table, you need to define how this table should read/write data from/to file system, i.e. the “input format” and “output format”. You also need to define how this table should deserialize the data to rows, or serialize rows to data, i.e. the “serde”. The following options can be used to specify the storage format(“serde”, “input format”, “output format”), e.g. CREATE TABLE src(id int) USING hive OPTIONS(fileFormat 'parquet'). By default, we will read the table files as plain text.
+
+![image](https://user-images.githubusercontent.com/81530072/188506641-421de099-9f2c-4e6e-89be-7fbd23bb1369.png)
+
+
+
 if you have any qurried regarding this code, feel free to contact me at ' majidse0110@gmail.com '
 
